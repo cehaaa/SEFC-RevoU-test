@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<section class="container">
+			<!-- menu -->
+			<div class="menu">
+				<div class="pill">Area of Triangle</div>
+				<div class="pill">Perimeter of Triangle</div>
+				<div class="pill">Area of Parallelogram</div>
+				<div class="pill">Perimeter of Parallelogram</div>
+			</div>
+			<!-- end menu -->
+
+			<!-- area of triangle  -->
+			<div class="card hidden" id="area-of-triangle-card">
+				<div class="card-left">
+					<div class="card-left-header">
+						<div>Result will appear here</div>
+					</div>
+					<div class="card-left-body">
+						<div id="area-of-triangle-result">0</div>
+					</div>
+					<div class="card-left-footer">
+						<div>Formula to calculate area of triangle is</div>
+						<div class="formula-block">&#189; &#215; Base &#215; Height</div>
+					</div>
+				</div>
+				<div class="card-right">
+					<!-- header -->
+					<div>
+						<div class="card-title">Area of Triangle</div>
+						<div class="card-text">Calculate the area of the triangle</div>
+					</div>
+					<!-- end header -->
+
+					<!-- form -->
+					<form class="form" id="area-of-triangle-form">
+						<!-- area of tringle base input -->
+						<div>
+							<label for="base" class="label">Base</label>
+							<div class="input-inline">
+								<input
+									id="area-of-triangle-base"
+									type="number"
+									class="form-control"
+									placeholder="E.g 40"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of tringle base input -->
+
+						<!-- area of tringle height input -->
+						<div>
+							<label for="height" class="label">Height</label>
+							<div class="input-inline">
+								<input
+									id="area-of-triangle-height"
+									type="number"
+									class="form-control"
+									placeholder="E.g 50"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of tringle height input -->
+					</form>
+					<!-- end form -->
+
+					<!-- action -->
+					<div class="card-right-footer">
+						<button
+							class="button primary"
+							id="calculate-area-of-triangle-button"
+						>
+							Calculate
+						</button>
+						<button class="button warning" id="reset-area-of-triangle-button">
+							Reset
+						</button>
+					</div>
+					<!-- end action -->
+				</div>
+			</div>
+			<!-- end area of triangle  -->
+
+			<!-- perimeter of triangle  -->
+			<div class="card hidden" id="perimeter-of-triangle-card">
+				<div class="card-left">
+					<div class="card-left-header">
+						<div>Result will appear here</div>
+					</div>
+					<div class="card-left-body">
+						<div id="perimeter-of-triangle-result">0</div>
+					</div>
+					<div class="card-left-footer">
+						<div>Formula to calculate perimeter of triangle is</div>
+						<div class="formula-block">a &plus; b &plus; c</div>
+					</div>
+				</div>
+				<div class="card-right">
+					<!-- header -->
+					<div>
+						<div class="card-title">Perimeter of Triangle</div>
+						<div class="card-text">Calculate the perimeter of the triangle</div>
+					</div>
+					<!-- end header -->
+
+					<!-- form -->
+					<form class="form" id="triangle-form">
+						<div>
+							<label for="triangle-side-a" class="label">Side A</label>
+							<div class="input-inline">
+								<input
+									id="triangle-side-a"
+									type="number"
+									class="form-control"
+									placeholder="E.g 40"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+
+						<div>
+							<label for="triangle-side-b" class="label">Side B</label>
+							<div class="input-inline">
+								<input
+									id="triangle-side-b"
+									type="number"
+									class="form-control"
+									placeholder="E.g 50"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+
+						<div>
+							<label for="triangle-side-c" class="label">Side C</label>
+							<div class="input-inline">
+								<input
+									id="triangle-side-c"
+									type="number"
+									class="form-control"
+									placeholder="E.g 50"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+					</form>
+					<!-- end form -->
+
+					<!-- action -->
+					<div class="card-right-footer">
+						<button
+							class="button primary"
+							id="calculate-perimeter-of-triangle-button"
+						>
+							Calculate
+						</button>
+						<button
+							class="button warning"
+							id="reset-perimeter-of-triangle-button"
+						>
+							Reset
+						</button>
+					</div>
+					<!-- end action -->
+				</div>
+			</div>
+			<!-- end perimeter of triangle  -->
+
+			<!-- area of parallelogram  -->
+			<div class="card hidden" id="area-of-parallelogram-card">
+				<div class="card-left">
+					<div class="card-left-header">
+						<div>Result will appear here</div>
+					</div>
+					<div class="card-left-body">
+						<div id="area-of-parallelogram-result">0</div>
+					</div>
+					<div class="card-left-footer">
+						<div>Formula to calculate area of parallelogram is</div>
+						<div class="formula-block">Base &#215; Height</div>
+					</div>
+				</div>
+				<div class="card-right">
+					<!-- header -->
+					<div>
+						<div class="card-title">Area of Parallelogram</div>
+						<div class="card-text">Calculate the area of the parallelogram</div>
+					</div>
+					<!-- end header -->
+
+					<!-- form -->
+					<form class="form" id="area-of-parallelogram-form">
+						<!-- area of parallelogram base input -->
+						<div>
+							<label for="base" class="label">Base</label>
+							<div class="input-inline">
+								<input
+									id="area-of-parallelogram-base"
+									type="number"
+									class="form-control"
+									placeholder="E.g 40"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of parallelogram base input -->
+
+						<!-- area of parallelogram height input -->
+						<div>
+							<label for="height" class="label">Height</label>
+							<div class="input-inline">
+								<input
+									id="area-of-parallelogram-height"
+									type="number"
+									class="form-control"
+									placeholder="E.g 50"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of parallelogram height input -->
+					</form>
+					<!-- end form -->
+
+					<!-- action -->
+					<div class="card-right-footer">
+						<button
+							class="button primary"
+							id="calculate-area-of-parallelogram-button"
+						>
+							Calculate
+						</button>
+						<button
+							class="button warning"
+							id="reset-area-of-parallelogram-button"
+						>
+							Reset
+						</button>
+					</div>
+					<!-- end action -->
+				</div>
+			</div>
+			<!-- end area of parallelogram -->
+
+			<!-- perimeter of parallelogram  -->
+			<div class="card hidden" id="perimeter-of-parallelogram-card">
+				<div class="card-left">
+					<div class="card-left-header">
+						<div>Result will appear here</div>
+					</div>
+					<div class="card-left-body">
+						<div id="perimeter-of-parallelogram-result">0</div>
+					</div>
+					<div class="card-left-footer">
+						<div>Formula to calculate perimeter of parallelogram is</div>
+						<div class="formula-block">2 &#215; (Side &plus; Base)</div>
+					</div>
+				</div>
+				<div class="card-right">
+					<!-- header -->
+					<div>
+						<div class="card-title">Perimeter of Parallelogram</div>
+						<div class="card-text">
+							Calculate the perimeter of the parallelogram
+						</div>
+					</div>
+					<!-- end header -->
+
+					<!-- form -->
+					<form class="form" id="perimeter-of-parallelogram-form">
+						<!-- area of parallelogram base input -->
+						<div>
+							<label for="parallelogram-side" class="label">Side</label>
+							<div class="input-inline">
+								<input
+									id="parallelogram-side"
+									type="number"
+									class="form-control"
+									placeholder="E.g 40"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of parallelogram base input -->
+
+						<!-- area of parallelogram height input -->
+						<div>
+							<label for="parallelogram-base" class="label">Base</label>
+							<div class="input-inline">
+								<input
+									id="parallelogram-base"
+									type="number"
+									class="form-control"
+									placeholder="E.g 50"
+									autocomplete="off"
+									value="0"
+								/>
+								<div>cm</div>
+							</div>
+						</div>
+						<!-- end area of parallelogram height input -->
+					</form>
+					<!-- end form -->
+
+					<!-- action -->
+					<div class="card-right-footer">
+						<button
+							class="button primary"
+							id="calculate-perimeter-of-parallelogram-button"
+						>
+							Calculate
+						</button>
+						<button
+							class="button warning"
+							id="reset-perimeter-of-parallelogram-button"
+						>
+							Reset
+						</button>
+					</div>
+					<!-- end action -->
+				</div>
+			</div>
+			<!-- perimeter area of parallelogram -->
+		</section>
+
+		<script src="./src/formula.js"></script>
+
+		<script src="./src/element.js"></script>
+		<script src="./src/utils.js"></script>
+
+		<script src="./src/menu.js"></script>
+
+		<script src="./src/triangle/areaOfTriangleAction.js"></script>
+		<script src="./src/triangle/perimeterOfTriangleAction.js"></script>
+
+		<script src="./src/parallelogram/areaOfParallelogramAction.js"></script>
+		<script src="./src/parallelogram/perimeterOfParallelogramAction.js"></script>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
